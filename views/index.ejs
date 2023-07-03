@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="This is a sample application built with carbon components">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <header class="bx--header" role="banner" aria-label="IBM" data-header>
+    <a class="bx--header__name" href="javascript:void(0)" title="">
+      <span class="bx--header__name--prefix">
+        IBM
+        &nbsp;
+      </span>
+      Developer
+    </a>
+  </header>
+  <br />
+  <h1 class="text-center">
+    <%= title %>
+  </h1>
+  <br />
+  <br />
+  <div class="bx--row">
+    <div class="bx--col-lg-2"></div>
+    <div class="bx--col-lg-8 border">
+      <div class="outside">
+        <div class="inside">
+          <div class="bx--row">
+            <div class="bx--col-lg-5">
+              <div class="bx--form-item">
+                <label for="temp" class="bx--label">Enter Temperature</label>
+
+                <input id="temp" type="text" class="bx--text-input" placeholder="Temperature in °C or °F">
+              </div>
+            </div>
+            <div class="bx--col-lg-4">
+              <div class="bx--form-item">
+                <label class="bx--label">Options</label>
+                <div class="bx--radio-button-group">
+                  <div class="bx--radio-button-wrapper">
+                    <input id="c2f" class="bx--radio-button" type="radio" value="c2f" name="radio-button" tabindex="0"
+                      checked>
+                    <label for="c2f" class="bx--radio-button__label">
+                      <span class="bx--radio-button__appearance"></span>
+                      <span class="bx--radio-button__label-text">Celsius to Fahrenheit</span>
+                    </label>
+                  </div>
+                  <div class="bx--radio-button-wrapper">
+                    <input id="f2c" class="bx--radio-button" type="radio" value="f2c" name="radio-button" tabindex="0">
+                    <label for="f2c" class="bx--radio-button__label">
+                      <span class="bx--radio-button__appearance"></span>
+                      <span class="bx--radio-button__label-text">Fahrenheit to Celsius</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bx--col-lg-3">
+              <div class="bx--form-item">
+                <label for="btn" class="bx--label">&nbsp;</label>
+                <button class="bx--btn bx--btn--tertiary bx--btn--field" id="convert" type="button">Convert</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bx--col-lg-2"></div>
+  </div>
+  <div class="bx--row">
+    <div class="bx--col-lg-2"></div>
+    <div class="bx--col-lg-8 border">
+      <div class="bx--form-item">
+        <label for="output" class="bx--label">Converted Value</label>
+        <input id="output" type="text" class="bx--text-input" placeholder="Temperature in °C or °F" readonly>
+      </div>
+    </div>
+    <div class="bx--col-lg-2"></div>
+  </div>
+</body>
+<script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
+<script src="/javascripts/index.js"></script>
+
+</html>
